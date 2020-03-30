@@ -12,7 +12,7 @@ Treachure = 16
 GreenHouse = 32
 RedHotel = 12
 
-
+#Step 1
 try:
     all_player = int(input('Сколько игроков играет (не более 6 человек)? - '))
     if all_player > 6 or all_player <= 0:
@@ -33,7 +33,6 @@ try:
 except (ValueError, NameError):
     print('*Ошибка ! Необходимо вввести целое число')
     exit()
-
 throw_cub(Players)
 
 winers = select_winers(Players)
@@ -45,6 +44,16 @@ while len(winers) != 1:
     winers = select_winers(winers)
     for win in winers:
         print('Игрок {0} выбросил максимальное значение = {1}'.format(win.name_player(), win.get_cub()))
+new_Player = []
+new_Player = new_Players(win.name_player(), Players)
+print('Порядок хода игроков следующий:')
+for player in new_Player:
+    if player == new_Player[0]:
+        print('Первым ходит игрок с именем {0}'.format(player.name_player()))
+    else:
+        print('Следующим ходит игрок с именем {0}'.format(player.name_player()))
+
+#Step 2
 
 
 

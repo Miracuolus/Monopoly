@@ -53,3 +53,26 @@ def select_winers(players):
         elif player.get_cub() == max_value:
             winers.append(player)
     return winers
+
+def new_Players(win, players):
+    """Список для создания нового списка игроков, начиная от игрока с максимальным броском кубика"""
+    new_Players = []
+    for player in players:
+        if player.name_player() == win:
+            #new_Players.append(player)
+            index = players.index(player)
+            #print(index)
+            #print(len(players))
+    for i in range(index , len(players)):
+        new_Players.append(players[i])
+        len_list = len(new_Players)
+        #print(i)
+    for j in players:
+        if len(new_Players) < len(players):
+            new_Players.append(j)
+    #for k in new_Players:
+    #    print(k.name_player())
+    #print(len(new_Players))
+    return new_Players
+
+
