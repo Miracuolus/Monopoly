@@ -54,6 +54,9 @@ for player in new_Player:
         print('Следующим ходит игрок с именем {0}'.format(player.name_player()))
 
 #Step 2
-
+Dice = Cube()
+for player in new_Player:
+    player.set_cub(Dice.get_cube())
+    print('Игрок {0} выбросил {1}'.format(player.name_player(), player.get_cub()))
 
 
